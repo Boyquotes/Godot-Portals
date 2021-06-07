@@ -1,6 +1,6 @@
 extends Spatial
 
-export(float) var move_speed = 1.0
+export(float) var move_speed = 3.0
 
 var mouse_target = null
 var player = null
@@ -74,6 +74,6 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_C):
 		 target_speed -= Vector3.UP
 		
-	camera.translation += target_speed.normalized() * (move_speed + (int(Input.is_key_pressed(KEY_SHIFT))*2)) * (delta * 1)
+	camera.translation += target_speed.normalized() * (move_speed + (int(Input.is_key_pressed(KEY_SHIFT))*3)) * (delta * 1)
 	
 	return
